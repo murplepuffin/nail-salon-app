@@ -7,19 +7,34 @@ const navLinks = [
 
 const services = [
   {
-    title: "Classic Manicure",
-    price: "$40",
-    desc: "Shape, cuticle care, light massage, and regular polish.",
+    title: "SNS Manicure",
+    price: "$58",
+    desc: "A popular dip powder nail technique that uses a resin base and colored powder to create a durable, long-lasting finish without requiring a UV light.",
   },
   {
-    title: "Japanese Gel Set",
-    price: "$75",
-    desc: "Long-lasting, premium non-toxic gel overlay and custom art base.",
+    title: "Gel Manicure",
+    price: "$42",
+    desc: "Long-lasting, premium non-toxic gel polish manicure.",
   },
   {
-    title: "Lush Pedicure",
-    price: "$65",
-    desc: "Exfoliating scrub, hydrating mask, massage, and meticulous polish.",
+    title: "Acrylic Manicure",
+    price: "$58+",
+    desc: "Long-lasting, premium non-toxic gel polish manicure.",
+  },
+  {
+    title: "Signature Pedicure",
+    price: "$50",
+    desc: "Exfoliating scrub, hydrating mask, extended massage, and meticulous polish.",
+  },
+  {
+    title: "Thai Massages",
+    price: "$55/90/125",
+    desc: "Ancient healing practice that combines acupressure, Indian Ayurvedic principles, and assisted yoga-like stretches.",
+  },
+  {
+    title: "Etc.",
+    price: "",
+    desc: "Call and inquire about our other services.",
   },
 ] as const;
 
@@ -39,7 +54,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 py-4 md:h-20 md:py-0 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div className="flex items-center justify-between gap-4">
             <span className="text-2xl font-serif tracking-wide text-rose-900">
-              Lush & Polish
+              Solar Nails
             </span>
             <a
               href="#book"
@@ -71,14 +86,14 @@ export default function Home() {
       <section className="max-w-7xl mx-auto px-6 py-20 md:py-32 grid md:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
           <span className="text-rose-600 font-semibold tracking-wider uppercase text-xs bg-rose-100/60 px-3 py-1 rounded-full">
-            Boutique Nail Studio
+            Family-Owned Nail Salon
           </span>
           <h1 className="text-4xl md:text-6xl font-serif leading-tight text-stone-900">
             Elevate Your Everyday Elegance
           </h1>
           <p className="text-stone-600 text-lg font-light leading-relaxed">
             Experience luxury nail care in a serene, modern environment. From
-            meticulous Japanese gel manicures to custom nail art, we bring your
+            meticulous manicures and pedicures to custom nail art, we bring your
             vision to life.
           </p>
           <div className="flex flex-wrap gap-4 pt-4">
@@ -98,7 +113,7 @@ export default function Home() {
         </div>
         <div className="relative h-[450px] rounded-3xl overflow-hidden shadow-2xl bg-rose-100">
           <div className="absolute inset-0 flex items-center justify-center text-rose-400 font-serif italic">
-            {/* Replace with <Image src="/hero.jpg" fill alt="Salon interior" className="object-cover" /> */}
+            {/* Replace with <Image src="/hero.jpg" fill alt="salon interior" className="object-cover" /> */}
             [Hero Image Placeholder]
           </div>
         </div>
@@ -152,7 +167,7 @@ export default function Home() {
               Gallery
             </h2>
             <p className="text-stone-600 font-light">
-              A glimpse of recent sets from the studio.
+              A glimpse of recent sets from the salon.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -172,21 +187,21 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-4">
             <h2 className="text-3xl md:text-4xl font-serif text-stone-900">
-              About the Studio
+              About the salon
             </h2>
             <p className="text-stone-600 font-light leading-relaxed">
-              Lush & Polish is a boutique nail studio focused on healthy nails
-              and considered design. Appointments are paced so each set receives
+              Solar Nails is a family-owned nail salon focused on healthy nails
+              and thorough care. Appointments are paced so each set receives
               full attention—from prep and cuticle work through a lasting
               finish.
             </p>
             <p className="text-stone-600 font-light leading-relaxed">
-              We use premium gels and gentle products in a calm, modern space
+              We use premium polishes/gels and gentle products in a calm, modern space
               designed for a quiet hour of care.
             </p>
           </div>
           <div className="h-80 rounded-3xl bg-rose-100 flex items-center justify-center text-rose-400 font-serif italic">
-            [Studio Portrait Placeholder]
+            [Salon Portrait Placeholder]
           </div>
         </div>
       </section>
@@ -206,29 +221,27 @@ export default function Home() {
             <div className="p-8 rounded-2xl bg-white border border-rose-100/60 space-y-2">
               <h3 className="font-serif text-xl text-stone-800">Address</h3>
               <p className="text-stone-600 font-light text-sm">
-                214 Rosewood Lane
+                12811 Hwy 53
                 <br />
-                Suite 2
-                <br />
-                Brooklyn, NY 11215
+                Marble Hill, GA 30148
               </p>
             </div>
             <div className="p-8 rounded-2xl bg-white border border-rose-100/60 space-y-2">
               <h3 className="font-serif text-xl text-stone-800">Hours</h3>
               <p className="text-stone-600 font-light text-sm">
-                Tue–Fri 10am–7pm
+                Mon–Fri 10am–6pm
                 <br />
-                Sat 9am–6pm
+                Sat 10am–5pm
                 <br />
-                Sun–Mon Closed
+                Sun Closed
               </p>
             </div>
             <div className="p-8 rounded-2xl bg-white border border-rose-100/60 space-y-2">
               <h3 className="font-serif text-xl text-stone-800">Phone</h3>
               <p className="text-stone-600 font-light text-sm">
-                (718) 555-0148
+                (770) 893-6041
                 <br />
-                hello@lushandpolish.studio
+                hello@lushandpolish.salon
               </p>
             </div>
           </div>
@@ -241,22 +254,22 @@ export default function Home() {
             Request an Appointment
           </h2>
           <p className="font-light text-rose-100 leading-relaxed">
-            Online booking is coming soon. Call the studio or email with your
+            Online booking is coming soon. Call the salon or email with your
             preferred service, date, and time—we will confirm as soon as a seat
             is available.
           </p>
           <div className="flex flex-wrap justify-center gap-4 pt-2">
             <a
-              href="tel:+17185550148"
+              href="tel:+17708936041"
               className="bg-white text-rose-900 hover:bg-rose-50 px-8 py-3.5 rounded-full font-medium transition"
             >
-              Call (718) 555-0148
+              Call (770) 893-6041
             </a>
             <a
-              href="mailto:hello@lushandpolish.studio"
+              href="mailto:hello@lushandpolish.salon"
               className="border border-rose-200 hover:border-white px-8 py-3.5 rounded-full font-medium transition"
             >
-              Email the Studio
+              Email the salon
             </a>
           </div>
         </div>
@@ -265,7 +278,7 @@ export default function Home() {
       <footer className="bg-white border-t border-rose-100 py-10">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
           <span className="font-serif text-rose-900 tracking-wide">
-            Lush & Polish
+            Solar Nails
           </span>
           <nav className="flex flex-wrap justify-center gap-6 text-sm text-stone-600">
             {navLinks.map((link) => (

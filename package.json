@@ -1,0 +1,30 @@
+{
+  "name": "nail-salon-app",
+  "version": "1.0.0",
+  "description": "nail-salon-app/ ├── client/                  # Frontend website (React, Next.js, or HTML/CSS) │   ├── public/              # Static assets (images, logos, favicons) │   ├── src/ │   │   ├── components/      # Reusable UI (Navbar, Footer, Button) │   │   ├── pages/           # Views (Home, Services, Gallery, About, Contact) │   │   ├── booking/         # Scheduling wizard UI (Date, Tech, Service picker) │   │   └── styles/          # CSS or Tailwind configuration │   └── package.json │ ├── server/                  # Backend API & scheduling logic (Node.js/Express or Python) │   ├── config/              # Database connections and environment variables │   ├── controllers/         # Business logic for bookings, users, and services │   ├── models/              # Database schemas (Appointments, Technicians, Clients) │   ├── routes/              # API endpoints (/api/appointments, /api/services) │   └── server.js            # Entry point for the backend server │ ├── admin/                   # Staff and owner management dashboard │   ├── src/ │   │   ├── calendar/        # Staff scheduling & calendar views │   │   ├── inventory/       # Product and supply tracking │   │   └── reports/         # Revenue and commission tracking │   └── package.json │ ├── shared/                  # Shared TypeScript types or validation schemas └── .env                     # Environment variables (DB URI, payment keys)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/murplepuffin/nail-salon-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/murplepuffin/nail-salon-app/issues"
+  },
+  "homepage": "https://github.com/murplepuffin/nail-salon-app#readme",
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "typescript": "^7.0.2"
+  }
+}

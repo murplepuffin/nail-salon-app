@@ -57,7 +57,16 @@ const listAppointments = asyncHandler(async (req, res) => {
   const filter = {};
   if (req.query.technicianId) filter.technician = req.query.technicianId;
   if (req.query.status) filter.status = req.query.status;
-  const appointments = await Appointment.find(filter);
+  let appointments = await Appointment.find(filter);
+  if (req.query.date) {
+    const day = startOfDay(new Date(`${req.query.date}T00:00:00`));
+    if (Number.isNaN(day.getTime())) throw httpError(400, "Invalid date");
+    const nextDay = addMinutes(day, 24 * 60);
+    appointments = appointments.filter((appointment) => {
+      const start = new Date(appointment.startTime);
+      return start >= day && start < nextDay;
+    });
+  }
   const hydrated = await Promise.all(appointments.map(hydrate));
   hydrated.sort(
     (a, b) => new Date(a.startTime).getTime() - new Date(b.startTime).getTime(),

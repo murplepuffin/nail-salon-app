@@ -7,14 +7,15 @@ const {
   updateAppointmentStatus,
   cancelAppointment,
 } = require("../controllers/appointmentsController");
+const { requireAdmin } = require("../controllers/adminAuth");
 
 const router = Router();
 
-router.get("/", listAppointments);
 router.get("/availability", listAvailability);
-router.get("/:id", getAppointment);
 router.post("/", createAppointment);
-router.patch("/:id", updateAppointmentStatus);
-router.delete("/:id", cancelAppointment);
+router.get("/", requireAdmin, listAppointments);
+router.get("/:id", requireAdmin, getAppointment);
+router.patch("/:id", requireAdmin, updateAppointmentStatus);
+router.delete("/:id", requireAdmin, cancelAppointment);
 
 module.exports = router;

@@ -4,11 +4,12 @@ const {
   getUser,
   createUser,
 } = require("../controllers/usersController");
+const { requireAdmin } = require("../controllers/adminAuth");
 
 const router = Router();
 
-router.get("/", listUsers);
-router.get("/:id", getUser);
-router.post("/", createUser);
+router.get("/", requireAdmin, listUsers);
+router.get("/:id", requireAdmin, getUser);
+router.post("/", requireAdmin, createUser);
 
 module.exports = router;
